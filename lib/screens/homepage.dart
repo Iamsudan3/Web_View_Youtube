@@ -23,8 +23,11 @@ final controller = WebViewController()
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
+        forceMaterialTransparency: true,
+      //  toolbarOpacity: 3,
         backgroundColor: Colors.deepPurple,
-        title: const Text("WebView"),
+
+        title: const Text("Youtube-Web"),
         
       ),
       body: WebViewWidget(

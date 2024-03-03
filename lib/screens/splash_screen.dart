@@ -27,9 +27,13 @@ super.initState();
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
-        child: Text("sss"),
+        child:Image.asset(
+          "assets/youtube.png",
+          scale:5 ,
+          )
       ),
     );
   }
