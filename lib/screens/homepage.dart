@@ -6,6 +6,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -13,17 +14,25 @@ class MyHomePage extends StatefulWidget {
 
 
 class _MyHomePageState extends State<MyHomePage> {
+    bool isLoading = true;
+    
 
 final controller = WebViewController()
   ..setJavaScriptMode(JavaScriptMode.unrestricted)
   ..loadRequest(Uri.parse("https://www.youtube.com/"));
+
+@override
+//  void initState(){
+//    super.initState();
+ 
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
-        forceMaterialTransparency: true,
+        // forceMaterialTransparency: true,
+        scrolledUnderElevation: 1,
       //  toolbarOpacity: 3,
         backgroundColor: Colors.deepPurple,
 
@@ -31,7 +40,11 @@ final controller = WebViewController()
         
       ),
       body: WebViewWidget(
-        controller: controller),
+      
+        controller: controller
+      
+        
+        ),
     );
   }
 }

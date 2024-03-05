@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:webapp/screens/Home.dart';
 import 'package:webapp/screens/homepage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ void initState() {
 
 super.initState();
   Timer(const Duration(seconds: 3), () {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
 
    });
   
@@ -30,10 +31,12 @@ super.initState();
     return  Scaffold(
       backgroundColor: Colors.black,
       body: Center(
+        
         child:Image.asset(
           "assets/youtube.png",
           scale:5 ,
           )
+          
       ),
     );
   }
