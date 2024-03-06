@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ElevatedButton(
               child: const Text("YOUTUBE"),
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MyHomePage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const MyHomePage()));
               },
               
           
@@ -37,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
             
           ),
           ElevatedButton(onPressed: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const NetflixScreen()));
-        }, child: const Text("NETFLIX"))
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const NetflixScreen()));
+          }, child: const Text("NETFLIX"))
         ],
       ),
     );
