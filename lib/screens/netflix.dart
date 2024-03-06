@@ -6,6 +6,7 @@ class NetflixScreen extends StatefulWidget {
 
   @override
   State<NetflixScreen> createState() => _NetflixScreenState();
+  
 
   
 }
@@ -15,11 +16,26 @@ class _NetflixScreenState extends State<NetflixScreen> {
 
   final controller = WebViewController()
   ..setJavaScriptMode(JavaScriptMode.unrestricted)
-  ..loadRequest(Uri.parse("https://www.netflix.com"));
+  ..loadRequest(Uri.parse("https://www.netflix.com/browse"));
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: AppBar(
+        title: const Text("Netflix"),
+        backgroundColor: Colors.blueGrey,
+        // automaticallyImplyLeading: false,
+// leading: IconButton(
+//           onPressed: () => Navigator.pop(context),
+//           icon: const Icon(
+//             Icons.arrow_back_ios,
+//             color: Colors.white,
+//           ),
+//         ),
+// 
+        elevation: 0,
+        centerTitle: true,
+      ),
       body: WebViewWidget(
         controller: controller,
       ),
