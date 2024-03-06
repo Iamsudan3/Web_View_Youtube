@@ -18,7 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
       
       appBar: AppBar(
         backgroundColor: Colors.purpleAccent,
-      title : const Text("App Bar") 
+      title : const Text("App Bar") ,
+      centerTitle: true,
       
       ),
       body: Row(
