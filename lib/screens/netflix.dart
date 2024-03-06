@@ -12,12 +12,17 @@ class NetflixScreen extends StatefulWidget {
 }
 
 class _NetflixScreenState extends State<NetflixScreen> {
-
-
-  final controller = WebViewController()
+late WebViewController controller;
+@override
+  void initState(){
+super.initState();
+controller = WebViewController()
   ..setJavaScriptMode(JavaScriptMode.unrestricted)
   ..loadRequest(Uri.parse("https://www.netflix.com/browse"));
+  
 
+}
+  
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

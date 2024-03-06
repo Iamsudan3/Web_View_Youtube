@@ -25,17 +25,20 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Center(
             child: ElevatedButton(
+              autofocus: true,
+              
               child: const Text("YOUTUBE"),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>const MyHomePage()));
               },
               
-          
+        
             ) ,
             
           
             
           ),
+          const SizedBox(width:15 ),
           ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>const NetflixScreen()));
           }, child: const Text("NETFLIX"))
