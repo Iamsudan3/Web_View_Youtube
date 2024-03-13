@@ -32,7 +32,7 @@ final controller = WebViewController()
     return Scaffold(
       appBar: AppBar( 
         // forceMaterialTransparency: true,
-        scrolledUnderElevation: 1,
+        // scrolledUnderElevation: 1,
       //  toolbarOpacity: 3,
         backgroundColor: Colors.deepPurple,
 
