@@ -36,7 +36,7 @@ final controller = WebViewController()
       //  toolbarOpacity: 3,
         backgroundColor: Colors.deepPurple,
 
-        title: const Text("Youtube-Web"),
+        title: const Text("Youtube Web"),
         
       ),
       body: WebViewWidget(
